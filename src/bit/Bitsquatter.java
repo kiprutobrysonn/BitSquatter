@@ -147,7 +147,6 @@ public class Bitsquatter {
 					txtDomValid.add(strippedLower);
 				
 		}
-		
 	ArrayList<String>uniqList = new ArrayList<String>();
 	for(int i =0;i<txtDomValid.size();i++) {
 		if(uniqList.contains(txtDomValid.get(i)))
