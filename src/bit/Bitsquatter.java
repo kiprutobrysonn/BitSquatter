@@ -217,16 +217,23 @@ public class Bitsquatter {
 	//
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Object p= new Bitsquatter();
+JFrame frame = new JFrame ();
+JButton button = new JButton();
+button.setSize(150,80);
+button.setText("Submit");
+button.addActionListener(new ActionListener(){
 
-		Scanner myUrl = new Scanner(System.in);
-		System.out.println("Enter the URL");
-		String Url = myUrl.nextLine();
-		myUrl.close();
-		
-		
 
-		checkDom(validDomain(candidatesUrl(bitMaskofDomain(Url))));
+
+});
+
+JTextField text = new JTextField();
+text.setSize (100,30);
+text.setText("Enter url");
+frame.add(text);
+frame.pack();
+
+url=text.getText();	checkDom(validDomain(candidatesUrl(bitMaskofDomain(Url))));
 		//System.out.println( validDomain(candidatesUrl(bitMaskofDomain(Url))));
 				
 	}
