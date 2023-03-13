@@ -1,4 +1,4 @@
-package bit;
+8package bit;
 import java.util.*;
 import java.io.*;
 import org.apache.commons.net.whois.WhoisClient;
@@ -217,12 +217,18 @@ public class Bitsquatter {
 	//
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+String url;
 JFrame frame = new JFrame ();
 JButton button = new JButton();
 button.setSize(150,80);
 button.setText("Submit");
 button.addActionListener(new ActionListener(){
+public void actionPerformed(Action e){
+if(e.getSource()==button){
+url=text.getText;
+}
 
+}
 
 
 });
@@ -231,9 +237,7 @@ JTextField text = new JTextField();
 text.setSize (100,30);
 text.setText("Enter url");
 frame.add(text);
-frame.pack();
-
-url=text.getText();	checkDom(validDomain(candidatesUrl(bitMaskofDomain(Url))));
+frame.pack();	checkDom(validDomain(candidatesUrl(bitMaskofDomain(Url))));
 		//System.out.println( validDomain(candidatesUrl(bitMaskofDomain(Url))));
 				
 	}
