@@ -1,4 +1,5 @@
-8package bit;
+package bit;
+import java.swing.*;
 import java.util.*;
 import java.io.*;
 import org.apache.commons.net.whois.WhoisClient;
