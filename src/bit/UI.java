@@ -1,7 +1,10 @@
-import javax.swing.*;
+package bit;
+
+import java.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 public class UI extends JFrame {
     JTextField webName;
@@ -14,7 +17,7 @@ public class UI extends JFrame {
         centreDisp = new JPanel();
         centreDisp.setLayout(null);
 
-        webName = new JTextField("Enter your ");
+        webName = new JTextField("Enter the domain to check availability");
         webName.setBounds(20,50,300,50);
 
         //Modify the response field;
@@ -33,7 +36,7 @@ public class UI extends JFrame {
         searchButton= new JButton("Search");
         searchButton.setBackground(Color.CYAN);
         searchButton.setBounds(300,50,100,50);
-        searchButton.addActionListener(actionEvent -> response.setText(" "));
+        searchButton.addActionListener(actionEvent -> response.setText(BitSquatter.checkDom(BitSquatter.validDomain(BitSquatter.candidatesUrl(BitSquatter.bitMaskofDomain(webName.getText()))))));
         centreDisp.add(searchButton);
 
         add(centreDisp);
@@ -42,6 +45,7 @@ public class UI extends JFrame {
         setSize(450,600);
         setResizable(false);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
     }
